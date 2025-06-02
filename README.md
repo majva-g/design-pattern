@@ -19,7 +19,7 @@ This repository is structured to help developers from different backgrounds (fro
 ## 💬 Questions & Discussions
 
 If you have any questions or run into issues while working on exercises:
-- Ask your question by opening an **issue** or messaging your team lead.
+- Ask your question by opening an **issue** or messaging me.
 - You can also leave comments in your PRs for specific feedback.
 
 ---
