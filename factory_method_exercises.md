@@ -1,7 +1,7 @@
 
 # تمرین‌های پیشرفته برای الگوی Factory Method
 
-این فایل شامل ۲۲ تمرین سطح بالا برای درک و پیاده‌سازی **الگوی Factory Method** است. تمرین‌ها برای هر دو گروه **فرانت‌اند** و **بک‌اند** طراحی شده‌اند.
+این فایل شامل 20 تمرین سطح بالا برای درک و پیاده‌سازی **الگوی Factory Method** است. تمرین‌ها برای هر دو گروه **فرانت‌اند** و **بک‌اند** طراحی شده‌اند.
 
 ---
 
@@ -47,8 +47,8 @@
 12. **Document Exporter**  
     ساخت خروجی‌های متفاوت (PDF, CSV, Excel, JSON) بسته به نیاز کاربر.
 
-13. **Logger System**  
-    فکتوری‌ای برای ساخت loggers مختلف (FileLogger, DBLogger, ConsoleLogger).
+13. **File Parser Factory**  
+    بسته به فرمت فایل ورودی (XML, JSON, CSV, YAML)، parser مناسب بساز.
 
 14. **Report Generator**  
     فکتوری‌ای برای تولید گزارشات متفاوت (گزارش مالی، عملکرد، کاربران جدید).
@@ -65,16 +65,11 @@
 18. **Image Processor Factory**  
     اعمال فیلترها یا افکت‌ها به تصاویر (grayscale, resize, crop).
 
-19. **Notification Sender**  
-    ساختن سیستم ارسال نوتیفیکیشن از کانال‌های مختلف (SMS, Email, Push).
+19. **API Client Factory**  
+    تولید کلاینت مناسب برای APIهای خارجی (GitHub, Slack, Google Maps و ...
 
 20. **Language Translator**  
     ترجمه متن از طریق APIهای مختلف (Google, DeepL, OpenAI) به‌صورت pluggable.
 
-21. **File Parser Factory**  
-    بسته به فرمت فایل ورودی (XML, JSON, CSV, YAML)، parser مناسب بساز.
-
-22. **API Client Factory**  
-    تولید کلاینت مناسب برای APIهای خارجی (GitHub, Slack, Google Maps و ...).
 
 ---
