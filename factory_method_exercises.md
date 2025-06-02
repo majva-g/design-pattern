@@ -1,75 +1,75 @@
 
-# تمرین‌های پیشرفته برای الگوی Factory Method
+# Advanced Practice Exercises for the Factory Method Pattern
 
-این فایل شامل 20 تمرین سطح بالا برای درک و پیاده‌سازی **الگوی Factory Method** است. تمرین‌ها برای هر دو گروه **فرانت‌اند** و **بک‌اند** طراحی شده‌اند.
+This file includes 20 high-level exercises for understanding and implementing the **Factory Method Design Pattern**. The exercises are divided into two groups: **Frontend** and **Backend**, suitable for various technologies and teams.
 
 ---
 
-## ✅ فرانت‌اند (React / TypeScript / JavaScript)
+## ✅ Frontend (React / TypeScript / JavaScript)
 
 1. **Dynamic Form Field Generator**  
-   فرم‌هایی بساز که بسته به نوع ورودی (text, checkbox, select) کامپوننت مناسب رو تولید کنن.
+   Build forms that dynamically create appropriate components based on the input type (text, checkbox, select).
 
 2. **Theme Component Factory**  
-   بسته به تم (dark / light / high-contrast) کامپوننت‌هایی با استایل متفاوت رندر کن.
+   Render components with different styles depending on the current theme (dark, light, high-contrast).
 
 3. **Notification Dispatcher**  
-   بسته به نوع اعلان (error, warning, info, success) UI مناسب بساز.
+   Generate UI alerts based on type (error, warning, info, success).
 
 4. **Widget Loader**  
-   در داشبورد، ویجت‌های مختلف (chart, table, map) را از طریق فکتوری بساز و مدیریت کن.
+   In a dashboard, dynamically create and manage widgets (chart, table, map) using a factory.
 
 5. **Dynamic Page Section Builder**  
-   CMS ساده که با توجه به JSON ورودی، سکشن‌هایی مثل hero, features, testimonials بسازه.
+   Create a simple CMS that builds page sections like hero, features, testimonials based on JSON input.
 
 6. **Custom Button Factory**  
-   دکمه‌هایی بساز که بسته به context (modal, navbar, form) ظاهر و رفتار متفاوتی داشته باشن.
+   Create buttons with different styles and behaviors depending on context (modal, navbar, form).
 
 7. **Lazy Component Renderer**  
-   فکتوری‌ای که بسته به route یا وضعیت اپ، component مناسب رو async لود کنه.
+   Load and render components asynchronously based on the app’s route or state.
 
 8. **Alert / Modal System**  
-   ساخت هشدارها و مودال‌هایی از انواع مختلف از طریق فکتوری.
+   Create alerts or modals of different types via a centralized factory.
 
 9. **Interactive Chart Factory**  
-   نمودارهای مختلف (line, bar, pie) رو با factory method بساز.
+   Build different types of charts (line, bar, pie) using a factory method.
 
 10. **UI Plugin Loader**  
-    سیستمی بساز که با دریافت نام پلاگین، کامپوننت مناسب رو load کنه (مثل drag/drop, datepicker, ...).
+    Load and render UI plugins (like drag/drop, datepicker) dynamically via a factory.
 
 ---
 
-## ✅ بک‌اند (Node.js / Python / PHP / .NET / Kotlin و...)
+## ✅ Backend (Node.js / Python / PHP / .NET / Kotlin, etc.)
 
 11. **Payment Gateway Factory**  
-    اتصال به درگاه‌های مختلف پرداخت مثل Stripe, PayPal, Zarinpal، بدون تغییر در کد اصلی.
+    Connect to different payment gateways like Stripe, PayPal, Zarinpal, without changing core logic.
 
 12. **Document Exporter**  
-    ساخت خروجی‌های متفاوت (PDF, CSV, Excel, JSON) بسته به نیاز کاربر.
+    Generate different output formats (PDF, CSV, Excel, JSON) depending on user selection.
 
-13. **File Parser Factory**  
-    بسته به فرمت فایل ورودی (XML, JSON, CSV, YAML)، parser مناسب بساز.
+13. **Report Generator**  
+    Produce different types of reports (financial, performance, user statistics) using a factory.
 
-14. **Report Generator**  
-    فکتوری‌ای برای تولید گزارشات متفاوت (گزارش مالی، عملکرد، کاربران جدید).
+14. **Auth Provider Factory**  
+    Support multiple authentication providers (Google, Facebook, LDAP) with factory method.
 
-15. **Auth Provider Factory**  
-    ورود با Google, Facebook, LDAP و... با factory method.
+15. **Message Queue Producer**  
+    Produce messages for different systems (RabbitMQ, Kafka, SQS) through a unified factory.
 
-16. **Message Queue Producer**  
-    ساخت ارسال‌کننده‌های متفاوت برای RabbitMQ, Kafka, SQS و غیره.
+16. **Storage Adapter Factory**  
+    Store files using different storage options: local disk, AWS S3, FTP.
 
-17. **Storage Adapter Factory**  
-    انتخاب و استفاده از فضای ذخیره‌سازی مختلف: local, S3, FTP.
+17. **Image Processor Factory**  
+    Apply different filters or transformations (grayscale, resize, crop) to images.
 
-18. **Image Processor Factory**  
-    اعمال فیلترها یا افکت‌ها به تصاویر (grayscale, resize, crop).
+18. **Language Translator**  
+    Translate text using various APIs (Google, DeepL, OpenAI) via a pluggable factory.
 
-19. **API Client Factory**  
-    تولید کلاینت مناسب برای APIهای خارجی (GitHub, Slack, Google Maps و ...
+19. **File Parser Factory**  
+    Parse input files (XML, JSON, CSV, YAML) into a standard internal structure.
 
-20. **Language Translator**  
-    ترجمه متن از طریق APIهای مختلف (Google, DeepL, OpenAI) به‌صورت pluggable.
-
+20. **API Client Factory**  
+    Create appropriate API clients for external services (GitHub, Slack, Google Maps, etc).
 
 ---
+
