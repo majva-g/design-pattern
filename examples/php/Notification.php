@@ -31,22 +31,32 @@ interface sendMessageStrategy{
 class EmailNotification implements sendMessageStrategy{
     public function notify(User $user, string $message):void
     {
-        echo 'send {$message} to {$user->email}';
+        echo "send {$message} to {$user->email}";
     }
 }
 class SMSNotification implements sendMessageStrategy{
     public function notify(User $user, string $message):void
     {
-        echo 'send {$message} to {$user->phone}';
+        echo "send {$message} to {$user->phone}";
     }
 }
 
 class InAPPNotification implements sendMessageStrategy{
     public function notify(User $user, string $message):void
     {
-        echo 'send {$message} to {$user}';
+        echo "send {$message} to {$user}";
     }
 }
+
+class DefaultNotification implements sendMessageStrategy
+{
+    public function notify(User $user, string $message): void
+    {
+        echo "default notifier";
+    }
+}
+
+
 class SendNotification{
     private sendMessageStrategy $messageStrategy;
 
@@ -80,8 +90,7 @@ class SendNotification{
         case "in_app" : 
             return new InAPPNotification;
             break;
-
-        default: return new EmailNotification;
+            default: return new DefaultNotification;
     }
 }
 
