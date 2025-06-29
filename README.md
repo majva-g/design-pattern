@@ -1,64 +1,90 @@
+# Strategy Design Pattern
 
-# Design Patterns – Practice Repository
+## What is the Strategy Pattern?
 
-Welcome to the **Design Patterns Practice Repository**!  
-This repository is structured to help developers from different backgrounds (frontend, backend, mobile, etc.) learn and master software design patterns in a hands-on way.
+The **Strategy Pattern** is a behavioral design pattern that enables selecting an algorithm's behavior at runtime. It defines a family of algorithms, encapsulates each one, and makes them interchangeable. The pattern allows the algorithm to vary independently from the clients that use it.
 
----
+## Benefits
 
-## 📚 How This Repository Works
+- **Flexibility**: Easily swap out different behaviors/algorithms.
+- **Maintainability**: Reduces conditional statements like `if-else` or `switch` logic.
+- **Open/Closed Principle**: Easily add new strategies without modifying existing code.
 
-- Each **design pattern** is organized in a **separate Git branch**.
-- Inside each branch, you’ll find:
-  - 📂 `examples/` — Real-world and conceptual examples in various programming languages.
-  - 📄 `exercises.md` — A list of pattern-specific exercises you need to solve.
-  - ✅ Submit your exercise solutions by creating a PR to that pattern’s branch.
+## When to Use
 
----
+- When you have multiple algorithms for a specific task and want to switch between them.
+- When you want to isolate the implementation of specific behaviors from the main logic.
+- When using many conditional statements to select behaviors.
 
-## 💬 Questions & Discussions
+## Structure
 
-If you have any questions or run into issues while working on exercises:
-- Ask your question by opening an **issue** or messaging me.
-- You can also leave comments in your PRs for specific feedback.
+### Participants
 
----
+- **Context**: Maintains a reference to a Strategy object and is configured with a ConcreteStrategy object.
+- **Strategy (interface/abstract class)**: Declares an interface common to all supported algorithms.
+- **ConcreteStrategies**: Implement the Strategy interface with different algorithms.
 
-## 🧪 How to Start
+## UML Diagram
 
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd design-pattern
-   ```
+```
++----------------+
+|   Context      |
+|----------------|
+| - strategy     |
+|----------------|
+| +setStrategy() |
+| +execute()     |
++--------+-------+
+         |
+         v
++--------+---------+       +---------------------+
+|      Strategy     |<------+ ConcreteStrategyA  |
+| (interface/base)  |       +---------------------+
++------------------+       +---------------------+
+                           | ConcreteStrategyB   |
+                           +---------------------+
+```
 
-2. Checkout the branch you want to practice:
-   ```bash
-   git checkout factory-method
-   ```
+## Example (Pseudocode)
 
-3. Read the `README.md` and `exercises.md` in that branch.
-4. Solve the exercises in your preferred language.
-5. Submit your solution as a Pull Request to that branch.
+```
+// Strategy Interface
+interface SortingStrategy {
+    sort(data): void
+}
 
----
+// Concrete Strategies
+class BubbleSort implements SortingStrategy {
+    sort(data): void {
+        // Bubble sort algorithm
+    }
+}
 
-## 🧠 Goals
+class QuickSort implements SortingStrategy {
+    sort(data): void {
+        // Quick sort algorithm
+    }
+}
 
-- Build real understanding of each design pattern.
-- Learn to implement them in different languages.
-- Gain hands-on experience through practical problems.
+// Context
+class DataSet {
+    strategy: SortingStrategy
 
----
+    setStrategy(strategy: SortingStrategy) {
+        this.strategy = strategy
+    }
 
-## 🛠 Who Is This For?
+    sortData(data) {
+        this.strategy.sort(data)
+    }
+}
 
-This repo is designed for:
-- Frontend developers (React, Angular, Vue)
-- Backend developers (Node.js, Python, PHP, .NET, Java, Kotlin)
-- Mobile developers (Kotlin, Swift)
-- Anyone who wants to improve software architecture skills.
+// Usage
+dataSet = new DataSet()
+dataSet.setStrategy(new QuickSort())
+dataSet.sortData(myData)
+```
 
----
+## Summary
 
-Let’s learn and grow together! 🚀
+The Strategy pattern promotes the definition of a family of algorithms that are encapsulated in separate strategy classes. It improves flexibility and adherence to solid design principles, especially the Open/Closed Principle and Single Responsibility Principle.
