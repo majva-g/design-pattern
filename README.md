@@ -1,66 +1,126 @@
+# Proxy Design Pattern
 
-# Design Patterns – Practice Repository
+## 🧠 What is the Proxy Pattern?
 
-Welcome to the **Design Patterns Practice Repository**!  
-This repository is structured to help developers from different backgrounds (frontend, backend, mobile, etc.) learn and master software design patterns in a hands-on way.
-
----
-
-## 📚 How This Repository Works
-
-- Each **design pattern** is organized in a **separate Git branch**.
-- Inside each branch, you’ll find:
-  - 📂 `examples/` — Real-world and conceptual examples in various programming languages.
-  - 📄 `exercises.md` — A list of pattern-specific exercises you need to solve.
-  - ✅ Submit your exercise solutions by creating a PR to that pattern’s branch.
+The **Proxy Pattern** is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. A proxy can add additional functionality when accessing an object, such as caching, logging, access control, or lazy loading.
 
 ---
 
-## 💬 Questions & Discussions
+## 🎯 Why Use It?
 
-If you have any questions or run into issues while working on exercises:
-- Ask your question by opening an **issue** or messaging me.
-- You can also leave comments in your PRs for specific feedback.
-
----
-
-## 🧪 How to Start
-
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd design-pattern
-   ```
-
-2. Checkout the branch you want to practice:
-   ```bash
-   git checkout factory-method
-   ```
-
-3. Read the `README.md` and `exercises.md` in that branch.
-4. Solve the exercises in your preferred language.
-5. Submit your solution as a Pull Request to that branch.
+- **Access Control**: Restrict access based on permissions.
+- **Lazy Initialization**: Delay resource-heavy object creation until it's needed.
+- **Logging & Auditing**: Track usage or access to sensitive operations.
+- **Caching**: Store and reuse expensive or repeated data.
+- **Remote Access**: Represent an object in a different address space (e.g., a remote server).
 
 ---
 
-## 🧠 Goals
+## 🧰 Where to Use It?
 
-- Build real understanding of each design pattern.
-- Learn to implement them in different languages.
-- Gain hands-on experience through practical problems.
-
----
-
-## 🛠 Who Is This For?
-
-This repo is designed for:
-- Frontend developers (React, Angular, Vue)
-- Backend developers (Node.js, Python, PHP, .NET, Java, Kotlin)
-- Mobile developers (Kotlin, Swift)
-- Anyone who wants to improve software architecture skills.
+- Virtual proxies for loading large files or images on demand.
+- Protection proxies for access control (e.g., admin-only access).
+- Caching proxies for repeated API or database calls.
+- Logging proxies for monitoring system behavior or audits.
+- Remote proxies for invoking operations on remote objects.
 
 ---
 
-Let’s learn and grow together! 🚀
+## 🧩 Structure
 
-Meet Link : https://meet.google.com/ewj-uwcx-gqd
+```
+Client --> Proxy --> RealSubject
+```
+
+- **Subject**: Interface common to RealSubject and Proxy.
+- **RealSubject**: The actual object that does the real work.
+- **Proxy**: Controls access and may perform additional tasks.
+
+---
+
+## 🛠 How to Implement
+
+1. Define an interface or abstract class (Subject).
+2. Implement the RealSubject class with core business logic.
+3. Create a Proxy class implementing the same interface.
+4. Add extra behavior (e.g., logging, caching) in the Proxy.
+5. Let clients use the Proxy instead of directly using RealSubject.
+
+---
+
+## 📊 UML Diagram (Textual)
+
+```
++-------------+       +-------------+       +--------------+
+|   Client    | --->  |   Proxy     | --->  |  RealSubject |
++-------------+       +-------------+       +--------------+
+        uses                delegates             does work
+```
+
+---
+
+## 🚫 When NOT to Use It
+
+- When performance is critical and extra layer causes overhead.
+- When added complexity of Proxy is not justified.
+- When real object is lightweight and always needed.
+
+---
+
+## ✅ Summary
+
+| Feature           | Proxy Pattern                  |
+|------------------|--------------------------------|
+| Type              | Structural                     |
+| Intent            | Control access to an object    |
+| Key Benefit       | Add logic around existing object transparently |
+| Common Uses       | Security, Logging, Caching, Lazy Load |
+
+---
+
+## 🧠 Related Patterns
+
+- **Decorator**: Adds behavior without controlling access.
+- **Adapter**: Converts one interface to another.
+- **Facade**: Simplifies a subsystem, doesn't control a single object.---
+
+## 📦 Example (Generic Pseudocode)
+
+### Scenario: Lazy Loading a Large Document
+
+```
+interface Document {
+    display()
+}
+
+class RealDocument implements Document {
+    constructor(filename) {
+        loadFromDisk(filename)
+    }
+
+    display() {
+        print("Displaying document: " + filename)
+    }
+}
+
+class ProxyDocument implements Document {
+    constructor(filename) {
+        this.filename = filename
+        this.realDocument = null
+    }
+
+    display() {
+        if (this.realDocument == null) {
+            this.realDocument = new RealDocument(this.filename)
+        }
+        this.realDocument.display()
+    }
+}
+
+// Client code
+doc = new ProxyDocument("contract.pdf")
+doc.display()  // Loads and displays
+doc.display()  // Only displays (no loading)
+```
+
+**Explanation**: `ProxyDocument` delays loading of `RealDocument` until `display()` is called, saving resources if the document is never viewed.
