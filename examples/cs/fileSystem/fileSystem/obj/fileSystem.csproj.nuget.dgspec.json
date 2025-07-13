@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/majva/Projects/class/desing-pattern/composite/cs/fileSystem/fileSystem/fileSystem.csproj": {}
+    "/home/majva/Projects/class/desing-pattern/examples/cs/fileSystem/fileSystem/fileSystem.csproj": {}
   },
   "projects": {
-    "/home/majva/Projects/class/desing-pattern/composite/cs/fileSystem/fileSystem/fileSystem.csproj": {
+    "/home/majva/Projects/class/desing-pattern/examples/cs/fileSystem/fileSystem/fileSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/majva/Projects/class/desing-pattern/composite/cs/fileSystem/fileSystem/fileSystem.csproj",
+        "projectUniqueName": "/home/majva/Projects/class/desing-pattern/examples/cs/fileSystem/fileSystem/fileSystem.csproj",
         "projectName": "fileSystem",
-        "projectPath": "/home/majva/Projects/class/desing-pattern/composite/cs/fileSystem/fileSystem/fileSystem.csproj",
+        "projectPath": "/home/majva/Projects/class/desing-pattern/examples/cs/fileSystem/fileSystem/fileSystem.csproj",
         "packagesPath": "/home/majva/.nuget/packages/",
-        "outputPath": "/home/majva/Projects/class/desing-pattern/composite/cs/fileSystem/fileSystem/obj/",
+        "outputPath": "/home/majva/Projects/class/desing-pattern/examples/cs/fileSystem/fileSystem/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/majva/.nuget/NuGet/NuGet.Config"
