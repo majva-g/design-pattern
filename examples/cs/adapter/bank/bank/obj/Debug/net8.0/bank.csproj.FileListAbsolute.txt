@@ -1,0 +1,15 @@
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.GeneratedMSBuildEditorConfig.editorconfig
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.AssemblyInfoInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.AssemblyInfo.cs
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.csproj.CoreCompileInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.sourcelink.json
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/bin/Debug/net8.0/bank
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/bin/Debug/net8.0/bank.deps.json
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/bin/Debug/net8.0/bank.runtimeconfig.json
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/bin/Debug/net8.0/bank.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/bin/Debug/net8.0/bank.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/refint/bank.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/bank.genruntimeconfig.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/adapter/bank/bank/obj/Debug/net8.0/ref/bank.dll
