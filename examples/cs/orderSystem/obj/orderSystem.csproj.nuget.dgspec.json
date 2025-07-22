@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/majva/Projects/class/desing-pattern/exercises/cs/orderSystem/orderSystem.csproj": {}
+    "/home/majva/Projects/class/desing-pattern/examples/cs/orderSystem/orderSystem.csproj": {}
   },
   "projects": {
-    "/home/majva/Projects/class/desing-pattern/exercises/cs/orderSystem/orderSystem.csproj": {
+    "/home/majva/Projects/class/desing-pattern/examples/cs/orderSystem/orderSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/majva/Projects/class/desing-pattern/exercises/cs/orderSystem/orderSystem.csproj",
+        "projectUniqueName": "/home/majva/Projects/class/desing-pattern/examples/cs/orderSystem/orderSystem.csproj",
         "projectName": "orderSystem",
-        "projectPath": "/home/majva/Projects/class/desing-pattern/exercises/cs/orderSystem/orderSystem.csproj",
+        "projectPath": "/home/majva/Projects/class/desing-pattern/examples/cs/orderSystem/orderSystem.csproj",
         "packagesPath": "/home/majva/.nuget/packages/",
-        "outputPath": "/home/majva/Projects/class/desing-pattern/exercises/cs/orderSystem/obj/",
+        "outputPath": "/home/majva/Projects/class/desing-pattern/examples/cs/orderSystem/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/majva/.nuget/NuGet/NuGet.Config"

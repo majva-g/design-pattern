@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r38jOc5+JDt+PlazZHeB8E11vpc4p7VmYNdTpizYlue/29n3l4JAVKNWgjPfXpYLKlfe/UP7R47liQ9ueKwjiA==",
+  "dgSpecHash": "OfYu3dBbONoiT0ynZV9FJW36hg98iOQT6q0FQ+FhzjQze4xb7s5pLdqUWPH9TYHHgguZb14itZ1b0JY7h9cZdw==",
   "success": true,
-  "projectFilePath": "/home/majva/Projects/class/desing-pattern/exercises/cs/orderSystem/orderSystem.csproj",
+  "projectFilePath": "/home/majva/Projects/class/desing-pattern/examples/cs/orderSystem/orderSystem.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
