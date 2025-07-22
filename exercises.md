@@ -68,4 +68,3 @@
 
 ---
 
-If you want, I can also generate code samples for any of these exercises. Just let me know!
