@@ -1,0 +1,15 @@
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.GeneratedMSBuildEditorConfig.editorconfig
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.AssemblyInfoInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.AssemblyInfo.cs
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.csproj.CoreCompileInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.sourcelink.json
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/bin/Debug/net8.0/decorator
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/bin/Debug/net8.0/decorator.deps.json
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/bin/Debug/net8.0/decorator.runtimeconfig.json
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/bin/Debug/net8.0/decorator.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/bin/Debug/net8.0/decorator.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/refint/decorator.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/decorator.genruntimeconfig.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/decorator/obj/Debug/net8.0/ref/decorator.dll
