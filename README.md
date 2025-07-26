@@ -1,66 +1,107 @@
 
-# Design Patterns – Practice Repository
+# Decorator Pattern
 
-Welcome to the **Design Patterns Practice Repository**!  
-This repository is structured to help developers from different backgrounds (frontend, backend, mobile, etc.) learn and master software design patterns in a hands-on way.
+## What is the Decorator Pattern?
 
----
+The **Decorator Pattern** is a structural design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class.
 
-## 📚 How This Repository Works
-
-- Each **design pattern** is organized in a **separate Git branch**.
-- Inside each branch, you’ll find:
-  - 📂 `examples/` — Real-world and conceptual examples in various programming languages.
-  - 📄 `exercises.md` — A list of pattern-specific exercises you need to solve.
-  - ✅ Submit your exercise solutions by creating a PR to that pattern’s branch.
+It is achieved by creating a set of decorator classes that are used to wrap concrete components.
 
 ---
 
-## 💬 Questions & Discussions
+## When and Why to Use It
 
-If you have any questions or run into issues while working on exercises:
-- Ask your question by opening an **issue** or messaging me.
-- You can also leave comments in your PRs for specific feedback.
+### ✅ Use When:
+- You want to add responsibilities to individual objects dynamically and transparently, without affecting other objects.
+- Subclassing would lead to an explosion of classes to support every combination of behaviors.
+- You want to adhere to the **Open/Closed Principle** — classes should be open for extension but closed for modification.
 
----
-
-## 🧪 How to Start
-
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd design-pattern
-   ```
-
-2. Checkout the branch you want to practice:
-   ```bash
-   git checkout factory-method
-   ```
-
-3. Read the `README.md` and `exercises.md` in that branch.
-4. Solve the exercises in your preferred language.
-5. Submit your solution as a Pull Request to that branch.
+### ❌ Don’t Use When:
+- You need global changes to all instances of a class.
+- The object lifecycle or state must remain strictly controlled.
+- Simplicity is more important than flexibility (e.g., small scripts).
 
 ---
 
-## 🧠 Goals
+## Real-World Examples
 
-- Build real understanding of each design pattern.
-- Learn to implement them in different languages.
-- Gain hands-on experience through practical problems.
-
----
-
-## 🛠 Who Is This For?
-
-This repo is designed for:
-- Frontend developers (React, Angular, Vue)
-- Backend developers (Node.js, Python, PHP, .NET, Java, Kotlin)
-- Mobile developers (Kotlin, Swift)
-- Anyone who wants to improve software architecture skills.
+- **Middleware in Web Frameworks** (e.g., logging, authentication, rate-limiting)
+- **GUI components** (e.g., adding borders, scrollbars, shadows)
+- **IO Streams** (buffered, compressed, encrypted streams)
+- **Validation pipelines** (chaining multiple rules together)
 
 ---
 
-Let’s learn and grow together! 🚀
+## UML Diagram (Text Version)
 
-Meet Link : https://meet.google.com/ewj-uwcx-gqd
+```
+       +-------------------+
+       |   Component       |<-----------------+
+       | (Interface)       |                  |
+       +-------------------+                  |
+                ^                             |
+                |                             |
++---------------------------+       +-----------------------+
+|    ConcreteComponent      |       |     Decorator         |
+|  (Original implementation)|       | (Abstract base class) |
++---------------------------+       +-----------------------+
+                                        ^
+                                        |
+                        +------------------------------+
+                        |    ConcreteDecoratorA        |
+                        +------------------------------+
+                        |    ConcreteDecoratorB        |
+                        +------------------------------+
+```
+
+---
+
+## How to Implement (Generic Steps)
+
+1. **Define a common interface or abstract class** (Component).
+2. **Implement the core functionality** in a ConcreteComponent.
+3. **Create an abstract Decorator class** that implements the same interface and wraps a Component.
+4. **Create ConcreteDecorator classes** that extend the Decorator and add behavior.
+5. **Compose your object by wrapping it with decorators** as needed.
+
+---
+
+## Example Scenario
+
+### Problem:
+You have a document exporting system. You want to export files in plain text, but sometimes encrypted, sometimes compressed, and sometimes both.
+
+### Without Decorator:
+- You’d need a class for every combination (e.g., `EncryptedCompressedExporter`, `EncryptedExporter`, etc.)
+
+### With Decorator:
+- You have `TextExporter`.
+- You wrap it in `EncryptionDecorator`, then in `CompressionDecorator` as needed.
+
+```plaintext
+DocumentExporter → EncryptionDecorator → CompressionDecorator → TextExporter
+```
+
+---
+
+## Pros
+- Flexible and composable behavior.
+- Promotes single responsibility.
+- Adheres to Open/Closed Principle.
+
+## Cons
+- Can become complex with many small classes.
+- Difficult to debug if chain is long.
+- Order of decorators affects behavior.
+
+---
+
+## When Not to Use
+- When the number of combinations is manageable via simple subclassing.
+- When you need to share behavior across instances.
+- When decorators introduce side effects or impact performance unnecessarily.
+
+---
+
+## Summary
+The **Decorator Pattern** is a powerful tool for adding behavior to objects in a flexible and reusable way. It should be used when behavior needs to vary dynamically, and composition is preferred over inheritance.
