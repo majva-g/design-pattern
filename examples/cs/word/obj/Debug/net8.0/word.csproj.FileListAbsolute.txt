@@ -1,0 +1,15 @@
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.GeneratedMSBuildEditorConfig.editorconfig
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.AssemblyInfoInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.AssemblyInfo.cs
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.csproj.CoreCompileInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.sourcelink.json
+/home/majva/Projects/class/desing-pattern/examples/cs/word/bin/Debug/net8.0/word
+/home/majva/Projects/class/desing-pattern/examples/cs/word/bin/Debug/net8.0/word.deps.json
+/home/majva/Projects/class/desing-pattern/examples/cs/word/bin/Debug/net8.0/word.runtimeconfig.json
+/home/majva/Projects/class/desing-pattern/examples/cs/word/bin/Debug/net8.0/word.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/word/bin/Debug/net8.0/word.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/refint/word.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/word.genruntimeconfig.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/word/obj/Debug/net8.0/ref/word.dll
