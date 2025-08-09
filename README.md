@@ -1,66 +1,88 @@
+# Flyweight Pattern
 
-# Design Patterns – Practice Repository
+## What is the Flyweight Pattern?
+The **Flyweight Pattern** is a structural design pattern that aims to minimize memory usage or computational costs by sharing as much data as possible with similar objects. It separates object properties into:
+- **Intrinsic state**: Shared, immutable data common to many objects.
+- **Extrinsic state**: Unique, contextual data supplied from outside the object.
 
-Welcome to the **Design Patterns Practice Repository**!  
-This repository is structured to help developers from different backgrounds (frontend, backend, mobile, etc.) learn and master software design patterns in a hands-on way.
-
----
-
-## 📚 How This Repository Works
-
-- Each **design pattern** is organized in a **separate Git branch**.
-- Inside each branch, you’ll find:
-  - 📂 `examples/` — Real-world and conceptual examples in various programming languages.
-  - 📄 `exercises.md` — A list of pattern-specific exercises you need to solve.
-  - ✅ Submit your exercise solutions by creating a PR to that pattern’s branch.
+Instead of creating multiple identical objects, the Flyweight Pattern reuses existing instances, reducing resource consumption.
 
 ---
 
-## 💬 Questions & Discussions
+## When to Use It?
+- When you need to create **a large number of similar objects**.
+- When the **intrinsic state can be shared** safely across different contexts.
+- When **memory footprint** is a critical concern.
 
-If you have any questions or run into issues while working on exercises:
-- Ask your question by opening an **issue** or messaging me.
-- You can also leave comments in your PRs for specific feedback.
-
----
-
-## 🧪 How to Start
-
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd design-pattern
-   ```
-
-2. Checkout the branch you want to practice:
-   ```bash
-   git checkout factory-method
-   ```
-
-3. Read the `README.md` and `exercises.md` in that branch.
-4. Solve the exercises in your preferred language.
-5. Submit your solution as a Pull Request to that branch.
+**Examples:**
+- Rendering thousands of characters in a text editor (glyphs).
+- Game development (e.g., reusing sprites for trees, enemies).
+- Large document processing where many elements are visually identical.
 
 ---
 
-## 🧠 Goals
-
-- Build real understanding of each design pattern.
-- Learn to implement them in different languages.
-- Gain hands-on experience through practical problems.
-
----
-
-## 🛠 Who Is This For?
-
-This repo is designed for:
-- Frontend developers (React, Angular, Vue)
-- Backend developers (Node.js, Python, PHP, .NET, Java, Kotlin)
-- Mobile developers (Kotlin, Swift)
-- Anyone who wants to improve software architecture skills.
+## Benefits
+- **Reduced memory usage** by sharing common parts of objects.
+- **Improved performance** in systems handling many similar objects.
+- Better separation between shared (intrinsic) and unique (extrinsic) data.
 
 ---
 
-Let’s learn and grow together! 🚀
+## Drawbacks
+- **Increased complexity** in code structure.
+- Requires careful management of **intrinsic vs extrinsic state**.
+- May cause confusion if state separation is unclear.
+- Might **not be beneficial** if the number of shared objects is small.
 
-Meet Link : https://meet.google.com/ewj-uwcx-gqd
+---
+
+## How to Implement
+1. **Identify intrinsic and extrinsic state**.
+2. **Create a Flyweight interface** defining common methods.
+3. **Implement concrete flyweight classes** for shared objects.
+4. **Use a Flyweight Factory** to manage object reuse.
+5. Store extrinsic state externally and pass it when needed.
+
+---
+
+## UML Diagram
+
+```mermaid
+classDiagram
+    class Flyweight {
+        +operation(extrinsicState)
+    }
+    class ConcreteFlyweight {
+        -intrinsicState
+        +operation(extrinsicState)
+    }
+    class FlyweightFactory {
+        -flyweights: Map
+        +getFlyweight(key)
+    }
+    Flyweight <|.. ConcreteFlyweight
+    FlyweightFactory --> Flyweight
+```
+
+---
+
+## Example (Language-Agnostic)
+
+Imagine a document editor rendering characters:
+
+- **Intrinsic state**: Font type, font size, style — same for many characters.
+- **Extrinsic state**: Position (x, y), color — different for each character.
+
+Instead of creating a new object for every character, reuse a `Character` flyweight for each font/style combination, passing position and color when drawing.
+
+---
+
+## When NOT to Use
+- When objects have **little or no shared state**.
+- When **memory is not a concern**.
+- When **state separation is too complex** and hurts maintainability.
+
+---
+
+## Summary
+The Flyweight Pattern is powerful for optimizing performance and memory in systems with many similar objects. However, it comes at the cost of added complexity, so it’s best used in high-scale scenarios where object sharing has measurable benefits.
