@@ -1,0 +1,15 @@
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.GeneratedMSBuildEditorConfig.editorconfig
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.AssemblyInfoInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.AssemblyInfo.cs
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.csproj.CoreCompileInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.sourcelink.json
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/bin/Debug/net8.0/logger
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/bin/Debug/net8.0/logger.deps.json
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/bin/Debug/net8.0/logger.runtimeconfig.json
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/bin/Debug/net8.0/logger.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/bin/Debug/net8.0/logger.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/refint/logger.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/logger.genruntimeconfig.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/logger/obj/Debug/net8.0/ref/logger.dll
