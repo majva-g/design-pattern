@@ -1,0 +1,15 @@
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.GeneratedMSBuildEditorConfig.editorconfig
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.AssemblyInfoInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.AssemblyInfo.cs
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.csproj.CoreCompileInputs.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.sourcelink.json
+/home/majva/Projects/class/desing-pattern/examples/cs/order/bin/Debug/net8.0/order
+/home/majva/Projects/class/desing-pattern/examples/cs/order/bin/Debug/net8.0/order.deps.json
+/home/majva/Projects/class/desing-pattern/examples/cs/order/bin/Debug/net8.0/order.runtimeconfig.json
+/home/majva/Projects/class/desing-pattern/examples/cs/order/bin/Debug/net8.0/order.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/order/bin/Debug/net8.0/order.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/refint/order.dll
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.pdb
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/order.genruntimeconfig.cache
+/home/majva/Projects/class/desing-pattern/examples/cs/order/obj/Debug/net8.0/ref/order.dll
