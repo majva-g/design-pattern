@@ -1,66 +1,119 @@
+# State Design Pattern
 
-# Design Patterns – Practice Repository
+## What is the State Pattern?
 
-Welcome to the **Design Patterns Practice Repository**!  
-This repository is structured to help developers from different backgrounds (frontend, backend, mobile, etc.) learn and master software design patterns in a hands-on way.
-
----
-
-## 📚 How This Repository Works
-
-- Each **design pattern** is organized in a **separate Git branch**.
-- Inside each branch, you’ll find:
-  - 📂 `examples/` — Real-world and conceptual examples in various programming languages.
-  - 📄 `exercises.md` — A list of pattern-specific exercises you need to solve.
-  - ✅ Submit your exercise solutions by creating a PR to that pattern’s branch.
+The **State Pattern** is a **behavioral design pattern** that allows an object to change its behavior when its internal state changes. 
+It appears as if the object changes its class at runtime.  
+Instead of using long `if-else` or `switch` statements, each state is represented as a separate class.
 
 ---
 
-## 💬 Questions & Discussions
+## Why Use the State Pattern?
 
-If you have any questions or run into issues while working on exercises:
-- Ask your question by opening an **issue** or messaging me.
-- You can also leave comments in your PRs for specific feedback.
-
----
-
-## 🧪 How to Start
-
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd design-pattern
-   ```
-
-2. Checkout the branch you want to practice:
-   ```bash
-   git checkout factory-method
-   ```
-
-3. Read the `README.md` and `exercises.md` in that branch.
-4. Solve the exercises in your preferred language.
-5. Submit your solution as a Pull Request to that branch.
+- Avoids complex conditional logic based on state.
+- Improves **readability** and **maintainability** of code.
+- Allows adding new states without modifying the context class.
+- Encapsulates state-specific behavior in dedicated classes.
 
 ---
 
-## 🧠 Goals
+## When to Use?
 
-- Build real understanding of each design pattern.
-- Learn to implement them in different languages.
-- Gain hands-on experience through practical problems.
+Use the State Pattern when:
+- An object must change its behavior depending on its state.
+- You want to avoid a large number of conditionals controlling behavior.
+- State transitions need to be explicit and controlled.
 
----
-
-## 🛠 Who Is This For?
-
-This repo is designed for:
-- Frontend developers (React, Angular, Vue)
-- Backend developers (Node.js, Python, PHP, .NET, Java, Kotlin)
-- Mobile developers (Kotlin, Swift)
-- Anyone who wants to improve software architecture skills.
+Examples:
+- Order lifecycle: Pending → Paid → Shipped → Delivered.
+- Ticket system: Open → InProgress → Resolved → Closed.
+- Media player: Playing → Paused → Stopped.
 
 ---
 
-Let’s learn and grow together! 🚀
+## When NOT to Use?
 
-Meet Link : https://meet.google.com/ewj-uwcx-gqd
+Avoid the State Pattern when:
+- The object has very few states, and adding multiple classes makes it unnecessarily complex.
+- State changes are rare, or conditional logic is simpler and more maintainable.
+
+---
+
+## Structure
+
+- **Context**: The object whose behavior changes depending on its state.
+- **State Interface**: Declares the methods that each state should implement.
+- **Concrete States**: Implement behaviors specific to a particular state.
+
+---
+
+## UML Diagram
+
+```mermaid
+classDiagram
+    Context --> State
+    State <|.. ConcreteStateA
+    State <|.. ConcreteStateB
+
+    class Context {
+      - state: State
+      + setState(State)
+      + request()
+    }
+
+    class State {
+      + handle()
+    }
+
+    class ConcreteStateA {
+      + handle()
+    }
+
+    class ConcreteStateB {
+      + handle()
+    }
+```
+
+---
+
+## Example (Conceptual)
+
+Imagine a **Document** that can be in different states:
+
+- **Draft**
+- **Moderation**
+- **Published**
+
+Each state defines how the document behaves when the user calls `publish()`.
+
+---
+
+## Steps to Implement
+
+1. Define a **State Interface** that declares common methods.
+2. Implement **Concrete State Classes** for each state.
+3. Add a **Context Class** that keeps a reference to the current state.
+4. Delegate behavior to the current state instead of using conditionals.
+5. Implement transitions inside the state classes or the context.
+
+---
+
+## Benefits
+
+- Cleaner code with no giant conditional blocks.
+- Makes adding/removing states easier.
+- Each state is independent and reusable.
+
+---
+
+## Drawbacks
+
+- More classes to manage (increased complexity).
+- Can be overkill for simple scenarios.
+
+---
+
+## Summary
+
+The **State Pattern** is ideal when objects must alter their behavior dynamically depending on state. 
+It makes the codebase more extensible and easier to maintain but should be avoided for overly simple state management scenarios.
